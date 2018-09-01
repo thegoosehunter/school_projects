@@ -35,7 +35,6 @@ public class Triangle {
 		int s2;
 		int s3;
 		
-		// TODO Auto-generated method stub
 
 		// TODO Get data from file
 		
@@ -50,7 +49,6 @@ public class Triangle {
 		else ((s1!=s2) && (s2!=s3) && (s1!==s3))
 			System.out.println("The Triangle is Scalene.");
 		
-		// TODO Output results
 		
 	}
 
