@@ -46,7 +46,7 @@ public class Triangle {
 		else if ((s1==s2) || (s2==s3) || (s1==s3))
 			System.out.println("The Trianle is Isosceles.");
 		
-		else ((s1!=s2) && (s2!=s3) && (s1!==s3))
+		else ((s1!=s2) && (s2!=s3) && (s1!=s3))
 			System.out.println("The Triangle is Scalene.");
 		
 		
