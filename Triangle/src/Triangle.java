@@ -41,11 +41,14 @@ public class Triangle {
 		
 		// TODO Test isTriangle
 		
-		// TODO Test isEquilateral 
+		if ((s1==s2) && (s1==s3) && (s2==s3))
+			System.out.println("The Triangle is Equalateral.");
 		
-		// TODO Test isIsosceles
+		else if ((s1==s2) || (s2==s3) || (s1==s3))
+			System.out.println("The Trianle is Isosceles.");
 		
-		// TODO Test isScalene
+		else ((s1!=s2) && (s2!=s3) && (s1!==s3))
+			System.out.println("The Triangle is Scalene.");
 		
 		// TODO Output results
 		
