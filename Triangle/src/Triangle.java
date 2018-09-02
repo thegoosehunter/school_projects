@@ -6,7 +6,7 @@
  * @since       2018-02-09
 <p>
  * Longer description.
- * Program to test what type of a triangle intergers would create:
+ * Program to test what type of a triangle intergers from a file would create:
  *  Equilateral, Isosceles, or Scalene  or if it is not a triangle 
  * pulls data from input.txt
 */
@@ -28,11 +28,14 @@ public class Triangle {
     <p>
      * Longer description.
      * The program loops to read each line of input and processes it in turn. 
-     * Use exception handling to trap input errors, and report them as "Not a Triangle"
+     * Use exception handling to trap input errors, and report them as "Not a Triangle because"
+     * This code is really long for what it does, I would like to reduce it greatly,
+     * but for problem solving purposes it works!
     */
 	
 	public static void main(String[] args) {
 
+		//file and data processing
 		try {
 		String file = "c:\\bit210\\Triangle\\input.txt";
 		
@@ -51,6 +54,7 @@ public class Triangle {
 			int s2 = parse.nextInt();
 			int s3 = parse.nextInt();
 		
+			//begin triangle tests
 			if ((s1<=0) || (s2<=0) || (s3<=0)) {
 				System.out.println("This is not a triangle because one side cannot be equal to zero or less than zero.");
 			}
@@ -84,6 +88,7 @@ public class Triangle {
 		
 		}
 		
+		//begin error handling
 		catch (FileNotFoundException fnfe)
 		{
 			
@@ -96,7 +101,6 @@ public class Triangle {
 			System.out.println("This is not a triangle because one of the variables is not an interger.");
 			
 		}
-		
 		
 		
 	}
