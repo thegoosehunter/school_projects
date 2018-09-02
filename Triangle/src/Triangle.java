@@ -35,14 +35,18 @@ public class Triangle {
 	public static void main(String[] args) {
 
 		try {
-		String file = "/Triangle/input.txt";
+		String file = "c:\\bit210\\Triangle\\input.txt";
+		
 		
 		Scanner sc = new Scanner (new File(file));
 		sc.useDelimiter(" ");
 		
+		while (sc.hasNext() ) {
+		
 		int s1 = sc.nextInt();
 		int s2 = sc.nextInt();
 		int s3 = sc.nextInt();
+		
 		
 		if ((s1 > s2 + s3) || (s2 > s1 + s3) || (s3 > s1 + s2)) {
 			System.out.println("This is not a triangle because one side cannot be larger than the sum of the other sides.");
@@ -74,6 +78,8 @@ public class Triangle {
 	
 		}
 		
+		}
+		
 		catch (FileNotFoundException fnfe)
 		{
 			
@@ -86,6 +92,7 @@ public class Triangle {
 			System.out.println("This is not a triangle because one of the variables is not an interger.");
 			
 		}
+		
 		
 	}
 
