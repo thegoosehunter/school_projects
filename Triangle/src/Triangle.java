@@ -10,8 +10,11 @@
  *  Equilateral, Isosceles, or Scalene  or if it is not a triangle 
  * pulls data from input.txt
 */
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.util.InputMismatchException;
+import java.util.ArrayList;
 
 public class Triangle {
 
@@ -30,26 +33,56 @@ public class Triangle {
     */
 	
 	public static void main(String[] args) {
-		
-		int s1;
-		int s2;
-		int s3;
-		
 
-		// TODO Get data from file
+		try {
+		String file = "/Triangle/input.txt";
 		
-		// TODO Test isTriangle
+		Scanner sc = new Scanner (new File(file));
+		sc.useDelimiter(" ");
 		
-		if ((s1==s2) && (s1==s3) && (s2==s3))
+		int s1 = sc.nextInt();
+		int s2 = sc.nextInt();
+		int s3 = sc.nextInt();
+		
+		if ((s1 > s2 + s3) || (s2 > s1 + s3) || (s3 > s1 + s2)) {
+			System.out.println("This is not a triangle because one side cannot be larger than the sum of the other sides.");
+			
+		}
+		
+		else if ((s1==s2) && (s1==s3) && (s2==s3)) {
 			System.out.println("The Triangle is Equalateral.");
+		}
 		
-		else if ((s1==s2) || (s2==s3) || (s1==s3))
+		else if ((s1==s2) || (s2==s3) || (s1==s3)) {
 			System.out.println("The Trianle is Isosceles.");
+		}
 		
-		else ((s1!=s2) && (s2!=s3) && (s1!=s3))
+		else if ((s1==s2) && (s2==s3) && (s1==s3)) {
 			System.out.println("The Triangle is Scalene.");
 		
+		}	
+		
+		else {
+			System.out.println("Something went wrong.");
+		}
+		
+	
+		}
+		
+		catch (FileNotFoundException fnfe)
+		{
+			
+		 System.out.println("Unable to find input.txt, the application is exiting.");
+		 
+		}
+		
+		catch (InputMismatchException imme)
+		{
+			System.out.println("This is not a triangle because one of the variables is not an interger.");
+			
+		}
 		
 	}
 
 }
+	
