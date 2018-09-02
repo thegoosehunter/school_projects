@@ -51,8 +51,8 @@ public class Triangle {
 			int s2 = parse.nextInt();
 			int s3 = parse.nextInt();
 		
-			if ((s1==0) || (s2==0) || (s3==0)) {
-				System.out.println("This is not a triangle because one side cannot be equal to zero.");
+			if ((s1<=0) || (s2<=0) || (s3<=0)) {
+				System.out.println("This is not a triangle because one side cannot be equal to zero or less than zero.");
 			}
 			
 			else if ((s1 > s2 + s3) || (s2 > s1 + s3) || (s3 > s1 + s2)) {
