@@ -33,16 +33,16 @@ public class ChernoffFaces extends JApplet {
 		
 		//TODO set Applet size and offsets
 		
-		//head
-		g.drawOval (200, 100, 80, 200);
+		//head - draws a circle (static - not used a parameter of the Chernoff Face)
+		g.drawOval (200, 200, 200, 200);
 		
-		//TODO 1st eye
+		//TODO Left eye - 1st parameter
 		
-		//TODO 2nd eye
+		//TODO Right eye - 2nd parameter
 		
-		//TODO nose
+		//TODO Nose - 3rd parameter
 		
-		//TODO mouth
+		//TODO Mouth - 4th parameter
 	}
 
 }
