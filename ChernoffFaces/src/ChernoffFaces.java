@@ -27,10 +27,22 @@ public class ChernoffFaces extends JApplet {
      * Describe what the method does and how it works.
     */
 	
-	public void paint (g) {
+	public void paint (Graphics g) {
 		
 		super.paint(g);
 		
+		//TODO set Applet size and offsets
+		
+		//head
+		g.drawOval (200, 100, 80, 200);
+		
+		//TODO 1st eye
+		
+		//TODO 2nd eye
+		
+		//TODO nose
+		
+		//TODO mouth
 	}
 
 }
