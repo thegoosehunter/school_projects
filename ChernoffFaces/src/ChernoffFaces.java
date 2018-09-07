@@ -8,6 +8,13 @@
  * Longer description.
  * Describe what the class does and how it works.
 */
+
+/*Applet code
+<applet code = "ChernoffFaces" width = "400" height = "300">
+<param name = "Status Bar" value = "Chernoff Faces">
+</applet code>
+*/
+
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 import java.awt.Graphics;
@@ -34,26 +41,24 @@ public class ChernoffFaces extends JApplet {
 		//center of 400w x 300h screen
 		int sX = 200, sY = 150;
 		
-		//head - draws a circle (static - not used a parameter of the Chernoff Face)
+		//head
 		g.drawOval (sX, sY, 200, 200);
 		
 		//1st Chernoff parameters
 		//left eye
-		g.drawOval (sX , sY, 95, 25);
+		g.drawOval (sX + 125, sY + 50, 25, 25);
 		//Right eye
-		g.drawOval (sX, 2, 35, 25);
+		g.drawOval (sX + 50, sY + 50, 25, 25);
+
+		//Nose - 2rd parameter
+		g.drawLine(sX + 100, sY + 75, sX + 100,  sY + 100);
 		
-		//2nd Chernoff parameters
-		//Left Eyebrow
-		g.drawLine(10, 10, 10, 10);
-		//Right Eyebrow
-		g.drawLine(10, 10, 10, 10);
+		//Mouth - 3rd parameter
+		g.drawOval(sX + 50, sY + 150, 30, 15);
 		
-		//Nose - 3rd parameter
-		g.drawLine(30, 0, 0, 30);
+		//eyebrow - 4th parameter
+		g.drawLine(sX + 50, sY + 50, sX + 150,  sY + 50);
 		
-		//Mouth - 4th parameter
-		g.drawOval(sX, 15, sY, 15);
 	}
 
 }
