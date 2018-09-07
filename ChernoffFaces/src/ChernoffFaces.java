@@ -16,7 +16,6 @@
 */
 
 import javax.swing.JApplet;
-import javax.swing.JOptionPane;
 import java.awt.Graphics;
 
 public class ChernoffFaces extends JApplet {
@@ -41,23 +40,35 @@ public class ChernoffFaces extends JApplet {
 		//center of 400w x 300h screen
 		int sX = 200, sY = 150;
 		
+		final int WINS = 68, LOSSES = 73, GAMESBACK = 10, ELIMNUMBER = 13;
+		
 		//head
 		g.drawOval (sX, sY, 200, 200);
 		
+		//Write descriptions of each parameter in the face
+		g.drawString("The height of the eyes represents the number of games won," + " " + WINS, sX, 50);
+		g.drawString("The length of the eyebrows represents the number of games lost," + " " + LOSSES, sX,70);
+		g.drawString("The length of the nose respresents the number of games back," + " " + GAMESBACK, sX, 90);
+		g.drawString("The height of the mouth represents the elmination number," + " " + ELIMNUMBER, sX, 110);
+		
+		
 		//1st Chernoff parameters
 		//left eye
-		g.drawOval (sX + 125, sY + 50, 25, 25);
+		g.drawOval (sX + 125, sY + 50, 25, WINS);
 		//Right eye
-		g.drawOval (sX + 50, sY + 50, 25, 25);
+		g.drawOval (sX + 50, sY + 50, 25, WINS);
 
 		//Nose - 2rd parameter
-		g.drawLine(sX + 100, sY + 75, sX + 100,  sY + 100);
+		g.drawLine(sX + 100, sY + 75, sX + 100,  sY + 75 + GAMESBACK);
 		
 		//Mouth - 3rd parameter
-		g.drawOval(sX + 50, sY + 150, 30, 15);
+		g.drawOval(sX + 50, sY + 150, 100, ELIMNUMBER);
 		
-		//eyebrow - 4th parameter
-		g.drawLine(sX + 50, sY + 50, sX + 150,  sY + 50);
+		//left eyebrow - 4th parameter
+		g.drawLine(sX + 50, sY + 50, sX + 50 + LOSSES,  sY + 50);
+		
+		//right eyebrow - 4th parameter
+		g.drawLine(sX + 125, sY + 50, sX + 125 + LOSSES,  sY + 50);
 		
 	}
 
