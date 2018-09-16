@@ -1,3 +1,5 @@
+package Reverse_Polish_Calc;
+import java.util.Stack;
 /**
  * Test Client for ArrayStack
 <p>
@@ -23,7 +25,23 @@ public class TestArrayStack {
      * Describe what the method does and how it works.
     */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Stack ArrayStack = new ArrayStack();
+		
+		//test push
+		ArrayStack.push(1);
+		System.out.println(ArrayStack.peek());
+		ArrayStack.push(2);
+		System.out.println(ArrayStack.peek());
+		ArrayStack.push(3);
+		System.out.println(ArrayStack.peek());
+		ArrayStack.push(4);
+		System.out.println(ArrayStack.peek());
+		ArrayStack.push(5);
+		System.out.println(ArrayStack.peek());
+		
+		//
+		
 
 	}
 

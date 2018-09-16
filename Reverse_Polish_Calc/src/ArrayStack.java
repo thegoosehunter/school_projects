@@ -1,5 +1,6 @@
+import java.util.Stack;
 /**
- * ArrayStack for Reverse Polish (HP) Style Calculator
+ * ArrayStack for Reverse Polish (HP) Style arrulator
 <p>
  * @author      Les Simmons
  * @version     1.0.4
@@ -22,13 +23,13 @@ public class ArrayStack {
      * Describe what the method does and how it works.
     */
 	
-	private static final int STACK_SIZE = 100;
-	private double calc [];
+	private int STACK_SIZE = 100;
+	private double [] arr;
 	private int top;
 	
 	//ArrayStack constructor
-	public ArrayStack() {
-		calc = new double[STACK_SIZE];
+	public ArrayStack(){
+		arr = new double[STACK_SIZE];
 		top = -1;	
 	}
 	
@@ -36,7 +37,7 @@ public class ArrayStack {
 	public void push(double c) {
 		if (top < STACK_SIZE)
 		{
-			calc[++top] = c;
+			arr[++top] = c;
 		}
 		else {
 			System.out.println("Stack Overflow, stack is full");;
@@ -44,12 +45,13 @@ public class ArrayStack {
 	}
 	
 	//Pop Method
-	public double pop() throws DataStructureException {
+	public double pop(){
 		if ( !isEmpty() )
-			return calc[top--];
-		else
-			throw new DataStructureException
-				("Stack empty: cannot pop");
+			return arr[top--];
+		else {
+			System.out.println("Stack empty: cannot pop");
+		}
+			
 	}
 	
 	//isEmpty Method
@@ -64,20 +66,19 @@ public class ArrayStack {
 	
 	
 	//Peek Method
-	public double peek() throws DataStructureException {
+	public double peek(){
 		if ( !isEmpty( ) ) {
-			return calc[top];
+			return arr[top];
 		}
 		else {
-			throw new DataStructureException
-				("Stack empty: cannot peak");
+			System.out.println("Stack empty: cannot peak");
 		}
 	}
 	
 	//Count Method
 	public int count(int al) {
 		if ( !isEmpty() ) {
-			al = calc.length;
+			al = arr.length;
 			return al;
 		}
 		else {
