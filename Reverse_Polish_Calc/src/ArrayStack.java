@@ -2,8 +2,8 @@
  * ArrayStack for Reverse Polish (HP) Style Calculator
 <p>
  * @author      Les Simmons
- * @version     1.0
- * @since       2018-15-09
+ * @version     1.0.4
+ * @since       2018-16-09
 <p>
  * Longer description.
  * Describe what the class does and how it works.
@@ -13,10 +13,10 @@ public class ArrayStack {
      * Short one line description of the method
     <p>
      * @author      Les Simmons
-     * @version     1.0
+     * @version     1.0.4
      * @param args  a String array of commmand line parameters;
      *              may be empty.
-     * @since       2018-15-09
+     * @since       2018-16-09
     <p>
      * Longer description.
      * Describe what the method does and how it works.
