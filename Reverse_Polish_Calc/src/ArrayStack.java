@@ -23,23 +23,23 @@ public class ArrayStack {
     */
 	
 	private static final int STACK_SIZE = 100;
-	private double Calc [ ] stack;
+	private double [] Calc stack;
 	private int top;
 	
 	//ArrayStack constructor
-	public ArrayStack () {
+	public ArrayStack() {
 		
-		stack = new double Calc [ STACK_SIZE ];
+		stack = new Calc[STACK_SIZE];
 		top = -1;
 		
 	}
 	
 	//Push Method
-	public boolean push ( Calc c) {
+	public boolean push(Calc c) {
 		
-		if ( !isFull ( ) )
+		if ( !isFull( ) )
 		{
-			stack [ ++top ];
+			stack[++top] = c;
 			return true;
 		}
 		else
@@ -47,37 +47,37 @@ public class ArrayStack {
 	}
 	
 	//Pop Method
-	public double Calc pop () throws DataStructureException {
+	public double Calc pop() throws DataStructureException {
 		
-		if ( !isEmpty () )
-			return stack [ top-- ];
+		if ( !isEmpty() )
+			return stack[top--];
 		else
 			throw new DataStructureException
 				("Stack empty: cannot pop");
 	}
 	
 	//isEmpty Method
-	public boolean isEmpty () {
+	public boolean isEmpty() {
 		return ( top == -1 );
 	}
 	
 	//isFull Method
-	public boolean isFull () {
+	public boolean isFull() {
 		return ( top == ( STACK_SIZE - 1) );
 	}
 	
 	//Peek Method
-	public double Calc peek () throw DataStructureException {
+	public double Calc peek() throws DataStructureException {
 		
-		if ( !isEmpty ( ) )
-			return stack [ top ];
+		if ( !isEmpty( ) )
+			return stack[top];
 		else
 			throw new DataStructureException
 				("Stack empty: cannot peak");
 	}
 	
 	//Count Method
-	public int count () {
+	public int count() {
 		
 	}
 }
