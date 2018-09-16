@@ -29,7 +29,7 @@ public class ArrayStack {
 	//ArrayStack constructor
 	public ArrayStack () {
 		
-		stack = new Calc [ STACK_SIZE];
+		stack = new Calc [ STACK_SIZE ];
 		top = -1;
 		
 	}
@@ -47,7 +47,7 @@ public class ArrayStack {
 	}
 	
 	//Pop Method
-	public Calc pop () throws DataStructureException {
+	public double Calc pop () throws DataStructureException {
 		
 		if ( !isEmpty () )
 			return stack [ top-- ];
@@ -67,7 +67,7 @@ public class ArrayStack {
 	}
 	
 	//Peek Method
-	public  Calc peek () throw DataStructureException {
+	public double Calc peek () throw DataStructureException {
 		
 		if ( !isEmpty ( ) )
 			return stack [ top ];
@@ -77,7 +77,7 @@ public class ArrayStack {
 	}
 	
 	//Count Method
-	public count () {
+	public int count () {
 		
 	}
 }
