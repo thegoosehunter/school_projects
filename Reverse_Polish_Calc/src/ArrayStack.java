@@ -28,7 +28,7 @@ public class ArrayStack {
 	private int top;
 	
 	//ArrayStack constructor
-	public ArrayStack(){
+	public ArrayStack(double[]){
 		arr = new double[STACK_SIZE];
 		top = -1;	
 	}

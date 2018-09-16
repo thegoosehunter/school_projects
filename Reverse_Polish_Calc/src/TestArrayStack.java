@@ -29,7 +29,7 @@ public class TestArrayStack {
 		Stack ArrayStack = new ArrayStack();
 		
 		//test push
-		ArrayStack.push(1);
+		ArrayStack.push(1.2);
 		System.out.println(ArrayStack.peek());
 		ArrayStack.push(2);
 		System.out.println(ArrayStack.peek());
