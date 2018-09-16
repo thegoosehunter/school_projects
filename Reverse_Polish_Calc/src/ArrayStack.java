@@ -23,13 +23,13 @@ public class ArrayStack {
     */
 	
 	private static final int STACK_SIZE = 100;
-	private Calc [ ] stack;
+	private double Calc [ ] stack;
 	private int top;
 	
 	//ArrayStack constructor
 	public ArrayStack () {
 		
-		stack = new Calc [ STACK_SIZE ];
+		stack = new double Calc [ STACK_SIZE ];
 		top = -1;
 		
 	}
