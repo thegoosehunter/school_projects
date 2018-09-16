@@ -44,6 +44,9 @@ public class TestArrayStack {
 		
 		//test count
 		System.out.println(myStack.count());
+		
+		//success
+		System.out.print("SUCCESS!");
 	}
 
 }
