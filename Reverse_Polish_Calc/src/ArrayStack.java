@@ -3,21 +3,21 @@ import java.util.Stack;
  * ArrayStack for Reverse Polish (HP) Style arrulator
 <p>
  * @author      Les Simmons
- * @version     1.0.4
- * @since       2018-16-09
+ * @version     1.0.5
+ * @since       2018-21-09
 <p>
  * Longer description.
  * Describe what the class does and how it works.
 */
-public class ArrayStack {
+public class ArrayStack extends AbstractStack {
 	 /**
      * Short one line description of the method
     <p>
      * @author      Les Simmons
-     * @version     1.0.4
+     * @version     1.0.5
      * @param args  a String array of commmand line parameters;
      *              may be empty.
-     * @since       2018-16-09
+     * @since       2018-21-09
     <p>
      * Longer description.
      * Describe what the method does and how it works.
@@ -84,5 +84,12 @@ public class ArrayStack {
 		else {
 			System.out.println("Cannot count, the array is empty");
 		}
+		
+		//clear method from AbstractStack
+		public AbstractStack.clear();
+		
+		//push method from AbstractStack
+		public AbstractStack.push(double c);
+		
 	}
 }
