@@ -23,22 +23,15 @@ public abstract class AbstractStack {
     */
 	
 	//push method
-	public abstract void push(double c) {
-		
-	}
+	public abstract void push(double c);
+	
 	//peek method
-	public abstract double peek() {
-		
-	}
+	public abstract double peek();
 	
 	//pop method
-	public abstract double pop() {
-		
-	}
+	public abstract double pop();
 	
 	//clear method
-	public abstract void clear() {
-		
-	}
+	public abstract void clear();
 
 }
