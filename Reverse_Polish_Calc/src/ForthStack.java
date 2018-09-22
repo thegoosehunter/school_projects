@@ -1,4 +1,4 @@
 
-public class ForthStack extands ArrayStack {
+public class ForthStack extends ArrayStack {
 
 }
