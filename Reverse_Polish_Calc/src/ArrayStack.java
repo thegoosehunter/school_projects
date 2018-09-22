@@ -23,7 +23,7 @@ public class ArrayStack extends AbstractStack {
      * Describe what the method does and how it works.
     */
 	
-	private int STACK_SIZE = 100;
+	private int STACK_SIZE = 3;
 	private double [] arr;
 	private int top;
 	
@@ -89,7 +89,7 @@ public class ArrayStack extends AbstractStack {
 		public AbstractStack.clear();
 		
 		//push method from AbstractStack
-		public AbstractStack.push(double c);
+		public AbstractStack.peek();
 		
 	}
 }
