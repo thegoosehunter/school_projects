@@ -23,12 +23,8 @@ public class ArrayStack extends AbstractStack {
      * Longer description.
      * Describe what the method does and how it works.
     */
-	
-<<<<<<< HEAD
-	private int STACK_SIZE = 100;
-=======
+
 	private int stackSize;
->>>>>>> branch 'master' of https://github.com/thegoosehunter/school_projects.git
 	private double [] arr;
 	private int top;
 	
@@ -96,19 +92,17 @@ public class ArrayStack extends AbstractStack {
 		for (int i = 0; i < arr.length; i++) {
 			counter = i;
 		}
-<<<<<<< HEAD
+
 		else {
 			System.out.println("Cannot count, the array is empty");
 		}
-		
-		//clear method from AbstractStack
-		public AbstractStack.clear();
-		
-		//push method from AbstractStack
-		public AbstractStack.peek();
-		
-=======
 	return counter;
->>>>>>> branch 'master' of https://github.com/thegoosehunter/school_projects.git
+
 	}
+	
+	//clear method from AbstractStack
+	public AbstractStack.clear();
+			
+	//push method from AbstractStack
+	public AbstractStack.peek();
 }
