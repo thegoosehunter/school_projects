@@ -1,4 +1,5 @@
 import java.util.Stack;
+
 /**
  * ArrayStack for Reverse Polish (HP) Style arrulator
 <p>
@@ -23,35 +24,47 @@ public class ArrayStack extends AbstractStack {
      * Describe what the method does and how it works.
     */
 	
-	private int STACK_SIZE = 3;
+<<<<<<< HEAD
+	private int STACK_SIZE = 100;
+=======
+	private int stackSize;
+>>>>>>> branch 'master' of https://github.com/thegoosehunter/school_projects.git
 	private double [] arr;
 	private int top;
 	
 	//ArrayStack constructor
-	public ArrayStack(double[]){
-		arr = new double[STACK_SIZE];
+	public ArrayStack(int n){
+		stackSize = n;
+		arr = new double[stackSize];
 		top = -1;	
 	}
 	
 	//Push Method
 	public void push(double c) {
-		if (top < STACK_SIZE)
-		{
+		try {
+			if (top < stackSize)
+			{
 			arr[++top] = c;
+			}
 		}
-		else {
-			System.out.println("Stack Overflow, stack is full");;
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("Stack overflow, the array is full");
 		}
 	}
 	
 	//Pop Method
 	public double pop(){
-		if ( !isEmpty() )
-			return arr[top--];
-		else {
-			System.out.println("Stack empty: cannot pop");
+		try {
+		if (!isEmpty()) {
+			double temp = arr[top -1];
+			System.out.println( "removed "+temp);
+			top--;
 		}
-			
+		}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("Stack is empty, cannot pop");
+		}
+		return arr[top - 1];
 	}
 	
 	//isEmpty Method
@@ -66,21 +79,24 @@ public class ArrayStack extends AbstractStack {
 	
 	
 	//Peek Method
-	public double peek(){
+	public double peek(int n){
 		if ( !isEmpty( ) ) {
-			return arr[top];
+		double value = arr[n];
+			return value;
 		}
 		else {
 			System.out.println("Stack empty: cannot peak");
 		}
+		return n;
 	}
 	
 	//Count Method
-	public int count(int al) {
-		if ( !isEmpty() ) {
-			al = arr.length;
-			return al;
+	public int count() {
+		int counter = 0;
+		for (int i = 0; i < arr.length; i++) {
+			counter = i;
 		}
+<<<<<<< HEAD
 		else {
 			System.out.println("Cannot count, the array is empty");
 		}
@@ -91,5 +107,8 @@ public class ArrayStack extends AbstractStack {
 		//push method from AbstractStack
 		public AbstractStack.peek();
 		
+=======
+	return counter;
+>>>>>>> branch 'master' of https://github.com/thegoosehunter/school_projects.git
 	}
 }

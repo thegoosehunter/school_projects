@@ -1,5 +1,5 @@
-package Reverse_Polish_Calc;
 import java.util.Stack;
+
 /**
  * Test Client for ArrayStack
 <p>
@@ -26,23 +26,27 @@ public class TestArrayStack {
     */
 	public static void main(String[] args) {
 		
-		Stack ArrayStack = new ArrayStack();
+		ArrayStack myStack = new ArrayStack(4);
 		
 		//test push
-		ArrayStack.push(1.2);
-		System.out.println(ArrayStack.peek());
-		ArrayStack.push(2);
-		System.out.println(ArrayStack.peek());
-		ArrayStack.push(3);
-		System.out.println(ArrayStack.peek());
-		ArrayStack.push(4);
-		System.out.println(ArrayStack.peek());
-		ArrayStack.push(5);
-		System.out.println(ArrayStack.peek());
+		myStack.push(1.2);
+		myStack.push(2.3);
+		myStack.push(3.4);
+		myStack.push(4.5);
+		myStack.push(5.6);
 		
-		//
-		
+		//test peek
+		System.out.println(myStack.peek(1));
+		System.out.println(myStack.peek(3));
 
+		//test pop
+		System.out.println(myStack.pop());
+		
+		//test count
+		System.out.println(myStack.count());
+		
+		//success
+		System.out.print("SUCCESS!");
 	}
 
 }
