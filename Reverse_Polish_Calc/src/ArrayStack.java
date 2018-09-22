@@ -105,8 +105,14 @@ public class ArrayStack extends AbstractStack {
 	//clear method from AbstractStack
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		try {
+			if ( !isEmpty( ) ) {
+			
+			}
+		}
+		catch{
+			
+		}
 	}
 
 }
