@@ -94,10 +94,19 @@ public class ArrayStack extends AbstractStack {
 		}
 	return counter;
 	}
-	
+
+	//peek method from AbstractStack
+	@Override
+	public double peek() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	//clear method from AbstractStack
-	public AbstractStack.clear();
-			
-	//push method from AbstractStack
-	public AbstractStack.peek();
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
