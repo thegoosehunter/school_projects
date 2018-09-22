@@ -92,12 +92,7 @@ public class ArrayStack extends AbstractStack {
 		for (int i = 0; i < arr.length; i++) {
 			counter = i;
 		}
-
-		else {
-			System.out.println("Cannot count, the array is empty");
-		}
 	return counter;
-
 	}
 	
 	//clear method from AbstractStack
