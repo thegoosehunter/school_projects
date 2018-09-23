@@ -25,48 +25,79 @@ public class ForthStack extends ArrayStack implements Forth {
 
 	@Override
 	public void add() {
-		double value1 = super.pop();
-		double value2 = super.pop();
-		double c = value1 + value2;
-		super.push(c);
+		try {
+			double value1 = super.pop();
+			double value2 = super.pop();
+			double c = value1 + value2;
+			super.push(c);
+			System.out.println(c);
+			}
+		catch(ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
 	}
 
 	@Override
 	public void sub() {
-		double value1 = super.pop();
-		double value2 = super.pop();
-		double c = value1 - value2;
-		super.push(c);
+		try {
+			double value1 = super.pop();
+			double value2 = super.pop();
+			double c = value1 - value2;
+			super.push(c);
+			}
+		catch(ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
 	}
 
 	@Override
 	public void mult() {
-		double value1 = super.pop();
-		double value2 = super.pop();
-		double c = value1 * value2;
-		super.push(c);
+		try {
+			double value1 = super.pop();
+			double value2 = super.pop();
+			double c = value1 * value2;
+			super.push(c);
+			}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
 	}
 
 	@Override
 	public void div() {
-		double value1 = super.pop();
-		double value2 = super.pop();
-		double c = value1 / value2;
-		super.push(c);
+		try {
+			double value1 = super.pop();
+			double value2 = super.pop();
+			double c = value1 / value2;
+			super.push(c);
+			}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
 	}
 
 	@Override
 	public void dup() {
-		double c = super.peek(2);
-		super.push(c);
+		try {
+			double c = super.peek(2);
+			super.push(c);
+			}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
 	}
 
 	@Override
 	public void twoDup() {
-		double value1 = super.peek(1);
-		double value2 = super.peek(2);
-		super.push(value1);
-		super.push(value2);
+		try {
+			double value1 = super.peek(1);
+			double value2 = super.peek(2);
+			super.push(value1);
+			super.push(value2);
+			}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
 	}
 
 }

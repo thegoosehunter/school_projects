@@ -52,17 +52,17 @@ public class ArrayStack extends AbstractStack {
 	
 	//Pop Method
 	public double pop(){
+		double temp = 0;
 		try {
-		if (!isEmpty()) {
-			double temp = arr[top -1];
-			System.out.println( "removed "+temp);
-			top--;
-		}
+		if (!isEmpty());{
+			temp = arr[top];
+			arr[top] = arr[--top];
+			}
 		}
 		catch (ArrayIndexOutOfBoundsException exception) {
-			System.out.println("Stack is empty, cannot pop");
+			System.out.println("Cannot pop");
 		}
-		return arr[top - 1];
+		return temp;
 	}
 	
 	//isEmpty Method
@@ -92,7 +92,7 @@ public class ArrayStack extends AbstractStack {
 	public int count() {
 		int counter = 0;
 		for (int i = 0; i < arr.length; i++) {
-			counter = i;
+			counter = i++;
 		}
 	return counter;
 	}
@@ -114,8 +114,8 @@ public class ArrayStack extends AbstractStack {
 	@Override
 	public void clear() {
 		if ( !isEmpty( ) ) {
-			arr = new double[stackSize];
-		}
+			arr = new double [stackSize];
+			}
 		else {
 			System.out.println("Stack empty: cannot clear");
 		}

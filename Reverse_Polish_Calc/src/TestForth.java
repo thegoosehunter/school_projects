@@ -27,17 +27,14 @@ public class TestForth {
 		ArrayStack myStack = new ArrayStack();
 		ForthStack myForthStack = new ForthStack();
 		
-		//test push
+		//test push and peek
 		myStack.push(1.2);
+		System.out.println(myStack.peek(0));
 		myStack.push(2.3);
-		myStack.push(3.4);
-		myStack.push(4.5);
-		myStack.push(5.6);
-		
-		//test peek
 		System.out.println(myStack.peek(1));
+		myStack.push(3.4);
 		System.out.println(myStack.peek(2));
-
+		
 		//test pop
 		System.out.println(myStack.pop());
 		
@@ -49,28 +46,33 @@ public class TestForth {
 		System.out.println(myStack.peek(2));
 		
 		//test sub
-		System.out.println("sub test");
+		myForthStack.sub();
+		System.out.println(myStack.peek(2));
 		
 		//test mult
-		System.out.println("mult test");
+		myForthStack.mult();
+		System.out.println(myStack.peek(2));
 		
 		//test div
-		System.out.println("div test");
+		myForthStack.div();
+		System.out.println(myStack.peek(2));
 		
 		//test dup
-		System.out.println("dup test");
+		myForthStack.dup();
+		System.out.println(myStack.peek(2));
 		
 		//test twoDup
-		System.out.println("twoDup test");
+		myForthStack.twoDup();
+		System.out.println(myStack.peek(2));
 		
 		//test clear
 		myStack.clear();
 		
 		//test peek after clear
-				System.out.println(myStack.peek(0));
-				System.out.println(myStack.peek(1));
-				System.out.println(myStack.peek(2));
-				
+		System.out.println(myStack.peek(0));
+		System.out.println(myStack.peek(1));
+		System.out.println(myStack.peek(2));
+
 		//success
 		System.out.print("SUCCESS!");
 		
