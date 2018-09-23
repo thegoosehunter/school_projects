@@ -45,6 +45,7 @@ public class TestForth {
 		System.out.println(myStack.count());
 		
 		//test add
+		myForthStack.add();
 		System.out.println(myStack.peek(2));
 		
 		//test sub
