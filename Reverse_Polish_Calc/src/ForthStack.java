@@ -3,45 +3,48 @@ public class ForthStack extends ArrayStack implements Forth {
 
 	@Override
 	public void add() {
-		// TODO Auto-generated method stub
-		
+		double value1 = super.pop();
+		double value2 = super.pop();
+		double c = value1 + value2;
+		super.push(c);
 	}
 
 	@Override
 	public void sub() {
-		// TODO Auto-generated method stub
-		
+		double value1 = super.pop();
+		double value2 = super.pop();
+		double c = value1 - value2;
+		super.push(c);
 	}
 
 	@Override
 	public void mult() {
-		// TODO Auto-generated method stub
-		
+		double value1 = super.pop();
+		double value2 = super.pop();
+		double c = value1 * value2;
+		super.push(c);
 	}
 
 	@Override
 	public void div() {
-		// TODO Auto-generated method stub
-		
+		double value1 = super.pop();
+		double value2 = super.pop();
+		double c = value1 / value2;
+		super.push(c);
 	}
 
 	@Override
 	public void dup() {
-		// TODO Auto-generated method stub
-		
+		double c = super.peek(top);
+		super.push(c);
 	}
 
 	@Override
 	public void twoDup() {
-		// TODO Auto-generated method stub
-		
+		double value1 = super.peek(top - 1);
+		double value2 = super.peek(top);
+		super.push(value1);
+		super.push(value2);
 	}
-
-	@Override
-	public double peek() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 
 }
