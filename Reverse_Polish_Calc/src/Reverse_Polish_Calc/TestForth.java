@@ -45,23 +45,22 @@ public class TestForth {
 		System.out.println(myStack.count());
 		
 		//test add
-		myStack.add();
 		System.out.println(myStack.peek(2));
 		
 		//test sub
-		System.out.println();
+		System.out.println("sub test");
 		
 		//test mult
-		System.out.println();
+		System.out.println("mult test");
 		
 		//test div
-		System.out.println();
+		System.out.println("div test");
 		
 		//test dup
-		System.out.println();
+		System.out.println("dup test");
 		
 		//test twoDup
-		System.out.println();
+		System.out.println("twoDup test");
 		
 		//test clear
 		myStack.clear();
