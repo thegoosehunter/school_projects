@@ -1,10 +1,11 @@
 import java.util.Stack;
-
+import java.util.ArrayUtils;
+import java.util.Arrays;
 /**
- * ArrayStack for Reverse Polish (HP) Style arrulator
+ * ArrayStack for Reverse Polish (HP) Style Calculator
 <p>
  * @author      Les Simmons
- * @version     1.0.5
+ * @version     1.0.6
  * @since       2018-21-09
 <p>
  * Longer description.
@@ -15,7 +16,7 @@ public class ArrayStack extends AbstractStack {
      * Short one line description of the method
     <p>
      * @author      Les Simmons
-     * @version     1.0.5
+     * @version     1.0.6
      * @param args  a String array of commmand line parameters;
      *              may be empty.
      * @since       2018-21-09
@@ -25,7 +26,7 @@ public class ArrayStack extends AbstractStack {
     */
 
 	private int stackSize;
-	private double [] arr;
+	private double[] arr;
 	private int top;
 	
 	//ArrayStack constructor
@@ -98,21 +99,19 @@ public class ArrayStack extends AbstractStack {
 	//peek method from AbstractStack
 	@Override
 	public double peek() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+		if ( !isEmpty( ) ) {
 
+		}
+	}
+	
 	//clear method from AbstractStack
 	@Override
 	public void clear() {
-		try {
-			if ( !isEmpty( ) ) {
-			
-			}
+		if ( !isEmpty( ) ) {
+			arr = new double[stackSize];
 		}
-		catch{
-			
+		else {
+			System.out.println("Stack empty: cannot clear");
 		}
 	}
-
 }

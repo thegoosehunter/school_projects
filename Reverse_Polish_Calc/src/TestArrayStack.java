@@ -26,7 +26,7 @@ public class TestArrayStack {
     */
 	public static void main(String[] args) {
 		
-		ArrayStack myStack = new ArrayStack(4);
+		ArrayStack myStack = new ArrayStack(3);
 		
 		//test push
 		myStack.push(1.2);
@@ -37,7 +37,7 @@ public class TestArrayStack {
 		
 		//test peek
 		System.out.println(myStack.peek(1));
-		System.out.println(myStack.peek(3));
+		System.out.println(myStack.peek(2));
 
 		//test pop
 		System.out.println(myStack.pop());
@@ -45,8 +45,17 @@ public class TestArrayStack {
 		//test count
 		System.out.println(myStack.count());
 		
+		//test clear
+		myStack.clear();
+		
+		//test peek after clear
+				System.out.println(myStack.peek(0));
+				System.out.println(myStack.peek(1));
+				System.out.println(myStack.peek(2));
+				
 		//success
 		System.out.print("SUCCESS!");
+		
 	}
 
 }
