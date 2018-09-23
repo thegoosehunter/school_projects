@@ -1,4 +1,4 @@
-package Reverse_Polish_Calc;
+
 /**
  * AbstractStack
 <p>
