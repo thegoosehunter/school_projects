@@ -57,14 +57,14 @@ public class ForthStack extends ArrayStack implements Forth {
 
 	@Override
 	public void dup() {
-		double c = super.peek(top);
+		double c = super.peek(2);
 		super.push(c);
 	}
 
 	@Override
 	public void twoDup() {
-		double value1 = super.peek(top - 1);
-		double value2 = super.peek(top);
+		double value1 = super.peek(1);
+		double value2 = super.peek(2);
 		super.push(value1);
 		super.push(value2);
 	}
