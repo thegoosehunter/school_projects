@@ -25,6 +25,7 @@ public class TestForth {
 	public static void main(String[] args) {
 		
 		ArrayStack myStack = new ArrayStack();
+		ForthStack myForthStack = new ForthStack();
 		
 		//test push
 		myStack.push(1.2);
