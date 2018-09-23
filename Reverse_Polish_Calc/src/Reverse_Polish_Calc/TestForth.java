@@ -1,3 +1,4 @@
+package Reverse_Polish_Calc;
 import java.util.Stack;
 /**
  * Test Client
@@ -44,16 +45,23 @@ public class TestForth {
 		System.out.println(myStack.count());
 		
 		//test add
+		myStack.add();
+		System.out.println(myStack.peek(2));
 		
 		//test sub
+		System.out.println();
 		
 		//test mult
+		System.out.println();
 		
 		//test div
+		System.out.println();
 		
 		//test dup
+		System.out.println();
 		
 		//test twoDup
+		System.out.println();
 		
 		//test clear
 		myStack.clear();
@@ -70,5 +78,3 @@ public class TestForth {
 
 }
 
-
-}

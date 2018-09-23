@@ -1,5 +1,27 @@
-
+package Reverse_Polish_Calc;
+ /**
+ * ForthStack for Reverse Polish (HP) Style Calculator
+<p>
+ * @author      Les Simmons
+ * @version     1.0.3
+ * @since       2018-22-09
+<p>
+ * Longer description.
+ * Describe what the class does and how it works.
+*/
 public class ForthStack extends ArrayStack implements Forth {
+	 /**
+     * Short one line description of the method
+    <p>
+     * @author      Les Simmons
+     * @version     1.0.3
+     * @param args  a String array of commmand line parameters;
+     *              may be empty.
+     * @since       2018-22-09
+    <p>
+     * Longer description.
+     * Describe what the method does and how it works.
+    */
 
 	@Override
 	public void add() {

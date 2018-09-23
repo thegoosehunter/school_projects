@@ -1,3 +1,4 @@
+package Reverse_Polish_Calc;
 /**
  * Forth interface file
 <p>
@@ -10,7 +11,7 @@
 */
 public interface Forth {
 	/**
-     * pure abstract class with methods
+     * interface with methods
     <p>
      * @author      Les Simmons
      * @version     1.0.2
