@@ -98,10 +98,15 @@ public class ArrayStack extends AbstractStack {
 
 	//peek method from AbstractStack
 	@Override
-	public double peek() {
+	public double peek(int n) {
 		if ( !isEmpty( ) ) {
-
-		}
+			double value = arr[n];
+				return value;
+			}
+			else {
+				System.out.println("Stack empty: cannot peak");
+			}
+			return n;
 	}
 	
 	//clear method from AbstractStack
