@@ -26,7 +26,7 @@ public class TestArrayStack {
     */
 	public static void main(String[] args) {
 		
-		ArrayStack myStack = new ArrayStack(3);
+		ArrayStack myStack = new ArrayStack();
 		
 		//test push
 		myStack.push(1.2);
