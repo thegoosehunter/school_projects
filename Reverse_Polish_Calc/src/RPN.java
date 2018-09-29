@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-
+import java.awt.event.*;
 
 public class RPN extends JFrame {
 	
@@ -20,6 +20,7 @@ public class RPN extends JFrame {
 		contents = getContentPane();
 		contents.setLayout(new FlowLayout());
 		
+		//label, textfields, buttons
 		inLabel = new JLabel("Input:");
 		input = new JTextField(5);
 		outLabel = new JLabel("Output:");
@@ -49,6 +50,13 @@ public class RPN extends JFrame {
 		contents.add( dupBut );
 		contents.add( twoDupBut );
 		contents.add( clearBut );
+		
+		//event handlers
+		
+		
+		
+		//event handler and listener for buttons
+		
 		
 		//window size
 		setSize(350,200);
