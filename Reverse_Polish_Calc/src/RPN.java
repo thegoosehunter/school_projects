@@ -8,7 +8,7 @@ public class RPN extends JFrame {
 	private Container contents;
 	private JTextField input, output, error;
 	private JLabel inLabel, outLabel, errorLabel;
-	private JButton addBut, subBut, multiBut, divBut, dupBut, twoDupBut, clearBut;
+	private JButton pushBut, popBut,addBut, subBut, multiBut, divBut, dupBut, twoDupBut, clearBut;
 	
 	//constructor
 	public RPN(){
@@ -27,6 +27,8 @@ public class RPN extends JFrame {
 		output = new JTextField(5);
 		errorLabel = new JLabel("Error:");
 		error = new JTextField(5);
+		pushBut = new JButton("push");
+		popBut = new JButton("pop");
 		addBut = new JButton("+");
 		subBut = new JButton("-");
 		multiBut = new JButton("*");
@@ -43,6 +45,8 @@ public class RPN extends JFrame {
 		contents.add( output );
 		contents.add(errorLabel);
 		contents.add( error );
+		contents.add( pushBut );
+		contents.add( popBut );
 		contents.add( addBut );
 		contents.add( subBut );
 		contents.add( multiBut );
@@ -70,13 +74,13 @@ public class RPN extends JFrame {
 		}
 		
 		//handlers
-		TextFieldHandler th = new TextFieldHandler();
+		TextFieldHandler tfh = new TextFieldHandler();
 		ButtonHandler bh = new ButtonHandler();
 		
 		//event handler and listener for textfields
-		input.addActionListener(th);
-		output.addActionListener(th);
-		error.addActionListener(th);
+		input.addActionListener(tfh);
+		output.addActionListener(tfh);
+		error.addActionListener(tfh);
 		
 		//event handler and listener for buttons
 		addBut.addActionListener(bh);
