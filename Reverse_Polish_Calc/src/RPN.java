@@ -89,7 +89,7 @@ public class RPN extends JFrame {
 		
 
 		//window size
-		setSize(350,200);
+		setSize(350,150);
 		
 		//make visible
 		setVisible(true);
