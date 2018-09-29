@@ -1,10 +1,13 @@
-import javax.swing.JFrame;
-import java.awt.Container;
+import javax.swing.*;
+import java.awt.*;
+
 
 public class RPN extends JFrame {
 	
 	//container
 	private Container contents;
+	private JTextField input, output;
+	private JLabel inLabel, outLabel;
 	
 	//constructor
 	public RPN(){
@@ -14,6 +17,18 @@ public class RPN extends JFrame {
 		
 		//get container
 		contents = getContentPane();
+		contents.setLayout(new FlowLayout());
+		
+		inLabel = new JLabel("Input");
+		input = new JTextField(5);
+		outLabel = new JLabel("Output");
+		output = new JTextField(5);
+		
+		//add components to window
+		contents.add(inLabel);
+		contents.add( input );
+		contents.add(outLabel);
+		contents.add( output );
 		
 		//window size
 		setSize(400,300);
