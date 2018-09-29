@@ -12,7 +12,7 @@ public class RPN extends JFrame {
 	
 	//constructor
 	public RPN(){
-		
+				
 		//title bar
 		super("RPN Calculator");
 		
@@ -51,13 +51,44 @@ public class RPN extends JFrame {
 		contents.add( twoDupBut );
 		contents.add( clearBut );
 		
-		//event handlers
+		//Textfield Handler
+		final class TextFieldHandler implements ActionListener{
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		}
 		
+		//Button Handler
+		final class ButtonHandler implements ActionListener{
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub	
+			}
 		
+		}
+		
+		//handlers
+		TextFieldHandler th = new TextFieldHandler();
+		ButtonHandler bh = new ButtonHandler();
+		
+		//event handler and listener for textfields
+		input.addActionListener(th);
+		output.addActionListener(th);
+		error.addActionListener(th);
 		
 		//event handler and listener for buttons
+		addBut.addActionListener(bh);
+		subBut.addActionListener(bh);
+		multiBut.addActionListener(bh);
+		divBut.addActionListener(bh);
+		dupBut.addActionListener(bh);
+		twoDupBut.addActionListener(bh);
+		clearBut.addActionListener(bh);
 		
-		
+
 		//window size
 		setSize(350,200);
 		
