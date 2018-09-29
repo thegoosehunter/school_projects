@@ -54,9 +54,8 @@ public class RPN extends JFrame {
 		//Textfield Handler
 		final class TextFieldHandler implements ActionListener{
 			@Override
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent ae) {
 				// TODO Auto-generated method stub
-				
 			}
 			
 		}
@@ -64,7 +63,7 @@ public class RPN extends JFrame {
 		//Button Handler
 		final class ButtonHandler implements ActionListener{
 			@Override
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent ae) {
 				// TODO Auto-generated method stub	
 			}
 		
