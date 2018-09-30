@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 
 public class RPN extends JFrame {
 	
@@ -9,6 +10,7 @@ public class RPN extends JFrame {
 	private JTextField input, output, error;
 	private JLabel inLabel, outLabel, errorLabel;
 	private JButton pushBut, popBut,addBut, subBut, multiBut, divBut, dupBut, twoDupBut, clearBut;
+	private JTextArea message;
 	double c;
 	
 	//constructor
@@ -20,6 +22,7 @@ public class RPN extends JFrame {
 		//get container
 		contents = getContentPane();
 		contents.setLayout(new FlowLayout());
+		
 		
 		//labels, textfields, buttons
 		inLabel = new JLabel("Input:");
@@ -37,6 +40,9 @@ public class RPN extends JFrame {
 		dupBut = new JButton("dup");
 		twoDupBut = new JButton("2Dup");
 		clearBut = new JButton("clr");
+		message = new JTextArea("Nothing is functioning correctly!\n"
+				+ "I am unable to solve these issues\n"
+				+ "at this time.");
 		
 		
 		//add components to window
@@ -57,29 +63,28 @@ public class RPN extends JFrame {
 		contents.add( dupBut );
 		contents.add( twoDupBut );
 		contents.add( clearBut );
-		
+		//notes
+		contents.add(message);
 		//stack
 		ForthStack calcStack = new ForthStack(4);
 
-		
 		//Textfield Handler
 		final class TextFieldHandler implements ActionListener{
 			@Override
 			public void actionPerformed(ActionEvent ae){
 				try{
-					if(((JTextField) input) != null); {
+					if(((JTextField) input) != null) {
 				String temp = input.getText();
 				c = Double.parseDouble(temp);
-				calcStack.push(c);
 					}
-					if (calcStack.isEmpty() == false);{
+					if (calcStack.isEmpty() == false){
 						double num = calcStack.peek(4);
 						String temp = Double.toString(num);
 						output.setText(temp);
 					}
 				}
 				finally{
-					
+
 				}
 			}
 			
@@ -148,7 +153,7 @@ public class RPN extends JFrame {
 		
 
 		//window size
-		setSize(350,150);
+		setSize(350,250);
 		
 		//make visible
 		setVisible(true);
