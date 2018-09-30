@@ -33,7 +33,7 @@ public class ForthStack extends ArrayStack implements Forth {
      * Longer description.
      * Describe what the method does and how it works.
     */
-	
+	 
 	@Override
 	public void add() {
 		try {
