@@ -19,7 +19,6 @@ public class ForthStack extends ArrayStack implements Forth {
 		super(n);
 		arr = new double[stackSize];
 		top = -1;
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

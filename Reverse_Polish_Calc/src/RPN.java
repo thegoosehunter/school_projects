@@ -98,6 +98,9 @@ public class RPN extends JFrame {
 		//make visible
 		setVisible(true);
 	}
+	
+	//stack
+	ForthStack calcStack = new ForthStack(4);
 
 	public static void main(String[] args) {
 		RPN rpnGui = new RPN();
