@@ -70,6 +70,7 @@ public class RPN extends JFrame {
 					if(((JTextField) input) != null); {
 				String temp = input.getText();
 				c = Double.parseDouble(temp);
+				calcStack.push(c);
 					}
 					if (calcStack.isEmpty() == false);{
 						double num = calcStack.peek(4);
