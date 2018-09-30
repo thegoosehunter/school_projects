@@ -32,7 +32,7 @@ public class ArrayStack extends AbstractStack {
 	
 	//ArrayStack constructor
 	public ArrayStack(){
-		stackSize = 3;
+		stackSize = 4;
 		arr = new double[stackSize];
 		top = -1;	
 	}
