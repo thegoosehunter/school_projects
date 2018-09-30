@@ -103,8 +103,6 @@ public class RPN extends JFrame {
 		RPN rpnGui = new RPN();
 		rpnGui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		ArrayStack calcStack = new ArrayStack();
-
 	}
 
 }

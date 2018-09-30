@@ -10,7 +10,19 @@
  * Describe what the class does and how it works.
 */
 public class ForthStack extends ArrayStack implements Forth {
-	 /**
+	
+	private int stackSize;
+	private double[] arr;
+	private int top;
+	
+	 public ForthStack(int n) {
+		super(n);
+		arr = new double[stackSize];
+		top = -1;
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
      * Short one line description of the method
     <p>
      * @author      Les Simmons
@@ -22,7 +34,7 @@ public class ForthStack extends ArrayStack implements Forth {
      * Longer description.
      * Describe what the method does and how it works.
     */
-
+	
 	@Override
 	public void add() {
 		try {
