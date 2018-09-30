@@ -1,6 +1,5 @@
 
 import java.util.Stack;
-import java.util.ArrayUtils;
 import java.util.Arrays;
 /**
  * ArrayStack for Reverse Polish (HP) Style Calculator
@@ -99,15 +98,7 @@ public class ArrayStack extends AbstractStack {
 
 	//peek method from AbstractStack
 	@Override
-	public double peek(int n) {
-		if ( !isEmpty( ) ) {
-			double value = arr[n];
-				return value;
-			}
-			else {
-				System.out.println("Stack empty: cannot peak");
-			}
-			return n;
+	public double peek() {
 	}
 	
 	//clear method from AbstractStack
@@ -120,4 +111,6 @@ public class ArrayStack extends AbstractStack {
 			System.out.println("Stack empty: cannot clear");
 		}
 	}
+
 }
+
