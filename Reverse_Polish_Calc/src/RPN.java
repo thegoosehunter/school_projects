@@ -40,6 +40,7 @@ public class RPN extends JFrame {
 		
 		
 		//add components to window
+		//labels and text fields
 		contents.add(inLabel);
 		contents.add( input );
 		contents.add(outLabel);
@@ -59,12 +60,26 @@ public class RPN extends JFrame {
 		
 		//stack
 		ForthStack calcStack = new ForthStack(4);
+
 		
 		//Textfield Handler
 		final class TextFieldHandler implements ActionListener{
 			@Override
-			public void actionPerformed(ActionEvent ae) {
-				// TODO Auto-generated method stub
+			public void actionPerformed(ActionEvent ae){
+				try{
+					if(((JTextField) input) != null); {
+				String temp = input.getText();
+				c = Double.parseDouble(temp);
+					}
+					if (calcStack.isEmpty() == false);{
+						double num = calcStack.peek(4);
+						String temp = Double.toString(num);
+						output.setText(temp);
+					}
+				}
+				finally{
+					
+				}
 			}
 			
 		}
@@ -138,9 +153,6 @@ public class RPN extends JFrame {
 		setVisible(true);
 	}
 	
-	//stack
-	ForthStack calcStack = new ForthStack(4);
-
 	public static void main(String[] args) {
 		RPN rpnGui = new RPN();
 		rpnGui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

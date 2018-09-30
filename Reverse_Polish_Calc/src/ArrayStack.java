@@ -37,6 +37,7 @@ public class ArrayStack extends AbstractStack {
 	}
 	
 	//Push Method
+	@Override
 	public void push(double c) {
 		try {
 			if (top < stackSize)
