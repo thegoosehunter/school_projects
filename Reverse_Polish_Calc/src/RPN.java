@@ -9,6 +9,7 @@ public class RPN extends JFrame {
 	private JTextField input, output, error;
 	private JLabel inLabel, outLabel, errorLabel;
 	private JButton pushBut, popBut,addBut, subBut, multiBut, divBut, dupBut, twoDupBut, clearBut;
+	double c;
 	
 	//constructor
 	public RPN(){
@@ -45,6 +46,7 @@ public class RPN extends JFrame {
 		contents.add( output );
 		contents.add(errorLabel);
 		contents.add( error );
+		//buttons
 		contents.add( pushBut );
 		contents.add( popBut );
 		contents.add( addBut );
@@ -54,6 +56,9 @@ public class RPN extends JFrame {
 		contents.add( dupBut );
 		contents.add( twoDupBut );
 		contents.add( clearBut );
+		
+		//stack
+		ForthStack calcStack = new ForthStack(4);
 		
 		//Textfield Handler
 		final class TextFieldHandler implements ActionListener{
@@ -68,7 +73,41 @@ public class RPN extends JFrame {
 		final class ButtonHandler implements ActionListener{
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				// TODO Auto-generated method stub	
+				try {
+					if (ae.getSource() == pushBut) {
+						calcStack.push(c);
+					}
+					else if(ae.getSource() == popBut){
+						calcStack.pop();
+					}
+					else if(ae.getSource() == addBut){
+						calcStack.add();
+					}
+					else if(ae.getSource() == subBut){
+						calcStack.sub();
+					}
+					else if(ae.getSource() == multiBut){
+						calcStack.mult();
+					}
+					else if(ae.getSource() == divBut){
+						calcStack.div();
+					}
+					else if(ae.getSource() == dupBut){
+						calcStack.dup();
+					}
+					else if(ae.getSource() == twoDupBut){
+						calcStack.twoDup();
+					}
+					else if(ae.getSource() == clearBut){
+						calcStack.clear();
+					}
+					else {
+						System.out.println("Somthing went wrong");
+					}
+				}
+				finally {
+					
+				}
 			}
 		
 		}
