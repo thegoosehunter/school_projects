@@ -7,9 +7,9 @@ public class RPN extends JFrame {
 	
 	//container
 	private Container contents;
-	private JTextField input, output, error;
-	private JLabel inLabel, outLabel, errorLabel;
-	private JButton pushBut, popBut,addBut, subBut, multiBut, divBut, dupBut, twoDupBut, clearBut;
+	private JTextField input, error, stack1, stack2, stack3, stack4, stack5,stack6, stack7, stack8, stack9, stack10;
+	private JLabel inLabel, errorLabel, stack1Label, stack2Label, stack3Label, stack4Label, stack5Label, stack6Label, stack7Label, stack8Label, stack9Label, stack10Label ;
+	private JButton pushBut, popBut, addBut, subBut, multiBut, divBut, dupBut, twoDupBut, clearBut;
 	private JTextArea message;
 	double c;
 	
@@ -25,12 +25,31 @@ public class RPN extends JFrame {
 		
 		
 		//labels, textfields, buttons
-		inLabel = new JLabel("Input:");
 		input = new JTextField(5);
-		outLabel = new JLabel("Output:");
-		output = new JTextField(5);
-		errorLabel = new JLabel("Error:");
+		inLabel = new JLabel("Input:");
 		error = new JTextField(5);
+		errorLabel = new JLabel("Error:");
+		stack1 = new JTextField(5);
+		stack1Label = new JLabel("Stack 1:");
+		stack2 = new JTextField(5);
+		stack2Label = new JLabel("Stack 2:");
+		stack3 = new JTextField(5);
+		stack3Label = new JLabel("Stack 3:");
+		stack4 = new JTextField(5);
+		stack4Label = new JLabel("Stack 4:");
+		stack5 = new JTextField(5);
+		stack5Label = new JLabel("Stack 5:");
+		stack6 = new JTextField(5);
+		stack6Label = new JLabel("Stack 6:");
+		stack7 = new JTextField(5);
+		stack7Label = new JLabel("Stack 7:");
+		stack8 = new JTextField(5);
+		stack8Label = new JLabel("Stack 8:");
+		stack9= new JTextField(5);
+		stack9Label = new JLabel("Stack 9:");
+		stack10 = new JTextField(5);
+		stack10Label = new JLabel("Stack 10:");
+		
 		pushBut = new JButton("push");
 		popBut = new JButton("pop");
 		addBut = new JButton("+");
@@ -40,19 +59,36 @@ public class RPN extends JFrame {
 		dupBut = new JButton("dup");
 		twoDupBut = new JButton("2Dup");
 		clearBut = new JButton("clr");
-		message = new JTextArea("Nothing is functioning correctly!\n"
-				+ "I am unable to solve these issues\n"
-				+ "at this time.");
+
 		
 		
 		//add components to window
 		//labels and text fields
 		contents.add(inLabel);
 		contents.add( input );
-		contents.add(outLabel);
-		contents.add( output );
 		contents.add(errorLabel);
 		contents.add( error );
+		contents.add(stack1Label);
+		contents.add( stack1 );
+		contents.add(stack2Label);
+		contents.add( stack2 );
+		contents.add(stack3Label);
+		contents.add( stack3 );
+		contents.add(stack4Label);
+		contents.add( stack4 );
+		contents.add(stack5Label);
+		contents.add( stack5 );
+		contents.add(stack6Label);
+		contents.add( stack6 );
+		contents.add(stack7Label);
+		contents.add( stack7 );
+		contents.add(stack8Label);
+		contents.add( stack8 );
+		contents.add(stack9Label);
+		contents.add( stack9 );
+		contents.add(stack10Label);
+		contents.add( stack10 );
+
 		//buttons
 		contents.add( pushBut );
 		contents.add( popBut );
@@ -64,9 +100,9 @@ public class RPN extends JFrame {
 		contents.add( twoDupBut );
 		contents.add( clearBut );
 		//notes
-		contents.add(message);
+
 		//stack
-		ForthStack calcStack = new ForthStack(4);
+		ForthStack calcStack = new ForthStack(10);
 
 		//Textfield Handler
 		final class TextFieldHandler implements ActionListener{
@@ -139,7 +175,7 @@ public class RPN extends JFrame {
 		
 		//event handler and listener for textfields
 		input.addActionListener(tfh);
-		output.addActionListener(tfh);
+		stack1.addActionListener(tfh);
 		error.addActionListener(tfh);
 		
 		//event handler and listener for buttons
