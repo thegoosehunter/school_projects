@@ -1,3 +1,4 @@
+package edu.gcu.Simmons.Leslie.rpn;
 
 /**
  * Forth interface file
@@ -28,6 +29,7 @@ public interface Forth {
      * square
      * factor
      * root
+     * neg
     */
 	
 	//add method - pops two values from the stack, adds them together, returns result to the stack
@@ -57,5 +59,6 @@ public interface Forth {
 	//root method - pops the top value divides by itself and returns it to the stack
 	public void root();
 	
-	
+	// posNef method - pops the top value and changes it to a negative number its postive or changes it to postivie if its negative and returns it to the stack
+	public void posNeg();
 }

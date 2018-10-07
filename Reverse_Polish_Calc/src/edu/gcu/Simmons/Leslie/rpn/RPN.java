@@ -1,4 +1,6 @@
+package edu.gcu.Simmons.Leslie.rpn;
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -29,7 +31,7 @@ public class RPN extends JFrame {
 	private Container contents;
 	private JTextField input, error, stack1, stack2, stack3, stack4, stack5,stack6, stack7, stack8, stack9, stack10;
 	private JLabel inLabel, errorLabel, stack1Label, stack2Label, stack3Label, stack4Label, stack5Label, stack6Label, stack7Label, stack8Label, stack9Label, stack10Label ;
-	private JButton pushBut, popBut, addBut, subBut, multiBut, divBut, dupBut, twoDupBut, squareBut, factorBut, rootBut, clearBut;
+	private JButton pushBut, popBut, addBut, subBut, multiBut, divBut, dupBut, twoDupBut, squareBut, factorBut, rootBut, posNegBut, clearBut;
 	private JTextArea message;
 	double c;
 	
@@ -72,6 +74,7 @@ public class RPN extends JFrame {
 		
 		pushBut = new JButton("push");
 		popBut = new JButton("pop");
+		posNegBut = new JButton("+/-");
 		addBut = new JButton("+");
 		subBut = new JButton("-");
 		multiBut = new JButton("*");
@@ -115,6 +118,7 @@ public class RPN extends JFrame {
 		//buttons
 		contents.add( pushBut );
 		contents.add( popBut );
+		contents.add( posNegBut );
 		contents.add( addBut );
 		contents.add( subBut );
 		contents.add( multiBut );
@@ -201,6 +205,9 @@ public class RPN extends JFrame {
 					else if (ae.getSource() == rootBut) {
 						calcStack.root();
 					}
+					else if (ae.getSource() == posNegBut) {
+						calcStack.posNeg();
+					}
 					else {
 						System.out.println("Somthing went wrong");
 					}
@@ -231,6 +238,7 @@ public class RPN extends JFrame {
 		squareBut.addActionListener(bh);
 		factorBut.addActionListener(bh);
 		rootBut.addActionListener(bh);
+		posNegBut.addActionListener(bh);
 		clearBut.addActionListener(bh);
 		
 

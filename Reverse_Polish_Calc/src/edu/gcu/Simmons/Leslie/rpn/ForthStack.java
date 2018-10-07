@@ -1,5 +1,5 @@
-
- /**
+package edu.gcu.Simmons.Leslie.rpn;
+/**
  * ForthStack for Reverse Polish (HP) Style Calculator
 <p>
  * @author      Les Simmons
@@ -34,7 +34,8 @@ public class ForthStack extends ArrayStack implements Forth {
      * twoDup
      * square
      * root
-     * factor.
+     * factor
+     * neg
     */
 	 
 	@Override
@@ -145,6 +146,24 @@ public class ForthStack extends ArrayStack implements Forth {
 		try {
 			double value = super.pop();
 			double c = value / value;
+			super.push(c);
+			}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
+	}
+	@Override
+	public void posNeg() {
+		try {
+			double value = super.pop();
+				if(value > 0) {
+					value = value *-1;
+				}
+				else {
+					value = value * 1;
+				}
+			
+			double c = value;
 			super.push(c);
 			}
 		catch (ArrayIndexOutOfBoundsException exception) {
