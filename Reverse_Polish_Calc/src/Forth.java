@@ -3,8 +3,8 @@
  * Forth interface file
 <p>
  * @author      Les Simmons
- * @version     1.0.2
- * @since       2018-22-09
+ * @version     1.0.4
+ * @since       2018-7-10
 <p>
  * Longer description.
  * Describe what the class does and how it works.
@@ -14,13 +14,20 @@ public interface Forth {
      * interface with methods
     <p>
      * @author      Les Simmons
-     * @version     1.0.2
+     * @version     1.0.4
      * @param args  a String array of commmand line parameters;
      *              may be empty.
-     * @since       2018-22-09
+     * @since       2018-7-10
     <p>
-     * Longer description.
-     * Describe what the method does and how it works.
+     * contains methods:
+     * add
+     * sub
+     * div
+     * dup
+     * twoDup
+     * square
+     * factor
+     * root
     */
 	
 	//add method - pops two values from the stack, adds them together, returns result to the stack
@@ -40,4 +47,15 @@ public interface Forth {
 	
 	//twoDup method - peeks at the top two values in the stack, pushes a copy of both values onto the stack
 	public void twoDup();
+	
+	//square method - pops top value and squares it and returns it to the stack
+	public void square();
+	
+	//factor method - pops the top value in the stack and then multiplies by the previous value
+	public void factor();
+	
+	//root method - pops the top value divides by itself and returns it to the stack
+	public void root();
+	
+	
 }

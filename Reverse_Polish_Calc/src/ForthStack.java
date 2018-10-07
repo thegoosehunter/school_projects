@@ -3,11 +3,10 @@
  * ForthStack for Reverse Polish (HP) Style Calculator
 <p>
  * @author      Les Simmons
- * @version     1.0.3
- * @since       2018-22-09
+ * @version     1.0.6
+ * @since       2018-7-10
 <p>
- * Longer description.
- * Describe what the class does and how it works.
+ * Forthstack use in Reverse Polish Notation Calculator.
 */
 public class ForthStack extends ArrayStack implements Forth {
 	
@@ -17,16 +16,25 @@ public class ForthStack extends ArrayStack implements Forth {
 	}
 
 	/**
-     * Short one line description of the method
+     * ForthStack extends Arraystack and implements Forth
     <p>
      * @author      Les Simmons
      * @version     1.0.3
      * @param args  a String array of commmand line parameters;
      *              may be empty.
-     * @since       2018-22-09
+     * @since      2018-7-10
     <p>
      * Longer description.
-     * Describe what the method does and how it works.
+     * Contains concrete methods:
+     * add
+     * sub
+     * div
+     * mult
+     * dup
+     * twoDup
+     * square
+     * root
+     * factor.
     */
 	 
 	@Override
@@ -105,5 +113,43 @@ public class ForthStack extends ArrayStack implements Forth {
 			System.out.println("The array is either full or empty");
 		}
 	}
-
+	
+	@Override
+	public void square() {
+		try {
+			double value = super.pop();
+			double c = value * value;
+			super.push(c);
+			}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
+		
+	}
+	
+	@Override
+	public void factor() {
+		try {
+			double value = super.pop();
+			double value1 = super.peek(9);
+			double c = Math.pow(value, value1);
+			super.push(c);
+			}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
+	}
+	
+	@Override
+	public void root() {
+		try {
+			double value = super.pop();
+			double c = value / value;
+			super.push(c);
+			}
+		catch (ArrayIndexOutOfBoundsException exception) {
+			System.out.println("The array is either full or empty");
+		}
+	}
+	
 }

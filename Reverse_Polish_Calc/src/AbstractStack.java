@@ -4,10 +4,9 @@
 <p>
  * @author      Les Simmons
  * @version     1.0.2
- * @since       2018-21-09
+ * @since       2018-07-10
 <p>
- * Longer description.
- * Describe what the class does and how it works.
+ * AbsractStack for methods used in Reverse Polish Notation Calculator
 */
 public abstract class AbstractStack {
 	/**
@@ -19,8 +18,11 @@ public abstract class AbstractStack {
      *              may be empty.
      * @since       2018-21-09
     <p>
-     * Longer description.
-     * Describe what the method does and how it works.
+     * abstract methods:.
+     * push
+     * peek
+     * pop
+     * clear
     */
 	
 	//push method
